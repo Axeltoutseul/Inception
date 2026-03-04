@@ -1,6 +1,9 @@
 FROM debian:bookworm
-RUN apt-get install -y mysql-server
+
+RUN pwd
+
 EXPOSE 3306
+
 ENTRYPOINT ["sh", "database.sh"]
 
 

@@ -1,1 +1,1 @@
-FROM debian:12.8.0
+FROM debian:bookworm
