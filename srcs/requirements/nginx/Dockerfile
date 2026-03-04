@@ -1,6 +1,6 @@
 FROM debian:bookworm
 
-RUN cat nginx.conf
+# RUN cat nginx.conf
 
 EXPOSE 443
 
