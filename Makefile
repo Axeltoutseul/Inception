@@ -6,7 +6,7 @@ NAME = inception
 
 $(NAME):
 	$(MKDIR)
-	$(CD) && docker compose up
+	$(CD) && docker compose up --build
 
 up: $(NAME)
 

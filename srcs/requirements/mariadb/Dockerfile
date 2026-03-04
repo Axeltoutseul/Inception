@@ -1,10 +1,10 @@
 FROM debian:bookworm
 
-RUN pwd
+#RUN pwd
 
 EXPOSE 3306
 
-ENTRYPOINT ["sh", "database.sh"]
+CMD ["bash", "-c", "tail -f /dev/null"]
 
 
 # FROM : <- viens me chercher l'image de quelque chose qui est sur dockerhub (l'equivalent de github pour docker).
