@@ -4,5 +4,5 @@ FROM debian:bookworm
 
 EXPOSE 443
 
-CMD ["bash", "-c", "tail -f /dev/null"]
+ENTRYPOINT ["bash", "-c", "tail -f /dev/null"]
 #CMD ["/usr/sbin/nginx", "-g", "daemon off;"]

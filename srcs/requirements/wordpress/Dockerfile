@@ -8,4 +8,4 @@ RUN apt-get update && apt-get install -y wget \
 
 EXPOSE 9000
 
-CMD ["bash", "-c", "tail -f /dev/null"]
+ENTRYPOINT ["bash", "-c", "tail -f /dev/null"]

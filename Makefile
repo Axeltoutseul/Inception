@@ -14,3 +14,5 @@ down:
 	docker run --rm -v "$$PWD:/app" -w /app alpine sh -c "rm -rf srcs/requirements/wordpress_data"
 	docker system prune -f
 	$(CD) && docker compose down
+
+re: down up

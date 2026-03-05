@@ -4,7 +4,7 @@ FROM debian:bookworm
 
 EXPOSE 3306
 
-CMD ["bash", "-c", "tail -f /dev/null"]
+ENTRYPOINT ["bash", "-c", "tail -f /dev/null"]
 
 
 # FROM : <- viens me chercher l'image de quelque chose qui est sur dockerhub (l'equivalent de github pour docker).
