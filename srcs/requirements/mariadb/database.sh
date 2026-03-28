@@ -1,3 +1,5 @@
+#!/bin/sh
+
 DB = "my_database"
 USER = "axbaudri"
 mysql -u $USER -e "CREATE DATABASE IF NOT EXISTS $DB (first_name VARCHAR(20), last_name VARCHAR(30), e-mail VARCHAR(60))"
