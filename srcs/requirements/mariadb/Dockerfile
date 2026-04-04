@@ -1,6 +1,6 @@
 FROM debian:bookworm
 
-#RUN pwd
+RUN apt update -y && apt upgrade -y
 
 EXPOSE 3306
 
