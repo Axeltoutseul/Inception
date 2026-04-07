@@ -45,8 +45,8 @@ services:
       - '8443:443'
       - '8080:80'
     volumes:
-      - ./requirements/nginx/conf/nginx.conf:/etc/nginx/conf/nginx.conf:ro
-      - ./requirements/wordpress_data/wordpress_data:/var/www/html
+      - ./requirements/nginx/conf/nginx.conf:/etc/nginx/nginx.conf:ro
+#      - ./requirements/wordpress_data/wordpress_data:/var/www/html
     networks:
       - app-network
     env_file: .env
