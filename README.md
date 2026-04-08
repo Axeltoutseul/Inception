@@ -23,3 +23,4 @@ make down
 ## Resources
 
 MariaDB in Docker compose : https://www.ionos.fr/digitalguide/hebergement/aspects-techniques/mariadb-docker/
+nginx.conf : https://medium.com/@wawerumwaura/nginx-and-docker-configuration-aac7b26210fe
