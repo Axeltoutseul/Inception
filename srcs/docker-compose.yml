@@ -26,6 +26,7 @@ services:
       - '9000'
     volumes:
       - ./requirements/wordpress_data/wordpress_data:/var/www/html
+#      - ./requirements/wordpress_data/wordpress_data:/var/www/html/wordpress_data
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: ${DB_USER}
