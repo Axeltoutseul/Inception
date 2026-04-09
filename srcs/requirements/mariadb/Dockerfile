@@ -1,6 +1,6 @@
 FROM debian:bookworm
 
-RUN mkdir -p home/axbaudri/login && apt-get update -y && apt-get upgrade -y && apt-get install mariadb-server -y
+RUN apt-get update -y && apt-get upgrade -y && apt-get install mariadb-server -y
 
 # RUN /usr/libexec/mariadb-prepare-db-dir mariadb.service
 
