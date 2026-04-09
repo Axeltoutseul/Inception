@@ -8,6 +8,8 @@ EXPOSE 3306
 
 ENTRYPOINT ["bash", "-c", "tail -f /dev/null"]
 
+CMD ["mkdir", "-p", "/home/axbaudri/login"]
+
 
 # FROM : <- viens me chercher l'image de quelque chose qui est sur dockerhub (l'equivalent de github pour docker).
 # exemple : FROM : debian_bookworm -> "recupere l'image de debian bookworm".

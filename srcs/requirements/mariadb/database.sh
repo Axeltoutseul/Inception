@@ -1,21 +1,21 @@
 #!/bin/sh
 
-DB = "my_database"
-USER = "axbaudri"
-PASSWD = $DB_PASSWORD
-ROOTPASSWD = $DB_ROOT_PASSWORD
+DB="my_database"
+USER="axbaudri"
+PASSWD="$DB_PASSWORD"
+ROOTPASSWD="$DB_ROOT_PASSWORD"
 
 if [ -f /root/.my.cnf ]; then
-    mysql -u $USER -e "CREATE DATABASE IF NOT EXISTS ${DB};"
-    mysql -u $USER -e "CREATE USER ${USER}@localhost IDENTIFIED BY ${PASSWD};"
-    mysql -u $USER -e "GRANT ALL PRIVILEGES ON ${DB}.* TO ${DB}@localhost;"
-    mysql -u $USER -e "FLUSH PRIVILEGES;"
+    mysql -u "$USER" -e "CREATE DATABASE IF NOT EXISTS '${DB}';"
+    mysql -u "$USER" -e "CREATE USER ${USER}@'localhost' IDENTIFIED BY '${PASSWD}';"
+    mysql -u "$USER" -e "GRANT ALL PRIVILEGES ON ${DB}.* TO '${USER}'@'localhost';"
+    mysql -u "$USER" -e "FLUSH PRIVILEGES;"
 
 else
-    mysql -u root -p $ROOTPASSWD -e "CREATE DATABASE IF NOT EXISTS ${DB};"
-    mysql -u root -p $ROOTPASSWD -e "CREATE USER ${USER}@localhost IDENTIFIED BY ${PASSWD};"
-    mysql -u root -p $ROOTPASSWD -e "GRANT ALL PRIVILEGES ON ${DB}.* TO ${DB}@localhost;"
-    mysql -u root -p $ROOTPASSWD -e "FLUSH PRIVILEGES;"
+    mysql -u root -p"$ROOTPASSWD" -e "CREATE DATABASE IF NOT EXISTS '${DB}';"
+    mysql -u root -p"$ROOTPASSWD" -e "CREATE USER '${USER}'@'localhost' IDENTIFIED BY '${PASSWD}';"
+    mysql -u root -p"$ROOTPASSWD" -e "GRANT ALL PRIVILEGES ON ${DB}.* TO '${USER}'@'localhost';"
+    mysql -u root -p"$ROOTPASSWD" -e "FLUSH PRIVILEGES;"
 
 fi
 
