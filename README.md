@@ -32,3 +32,6 @@ https://stephane-arrami.com/articles/guide-pratique-pour-dockeriser-wordpress-av
 
 nginx.conf :
 https://medium.com/@wawerumwaura/nginx-and-docker-configuration-aac7b26210fe
+
+database creation :
+https://stackoverflow.com/questions/33470753/create-mysql-database-and-user-in-bash-script
