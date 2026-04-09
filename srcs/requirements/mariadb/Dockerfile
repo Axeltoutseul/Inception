@@ -1,14 +1,12 @@
 FROM debian:bookworm
 
-RUN apt-get update -y && apt-get upgrade -y && apt-get install mariadb-server -y
+RUN mkdir -p home/axbaudri/login && apt-get update -y && apt-get upgrade -y && apt-get install mariadb-server -y
 
 # RUN /usr/libexec/mariadb-prepare-db-dir mariadb.service
 
 EXPOSE 3306
 
 ENTRYPOINT ["bash", "-c", "tail -f /dev/null"]
-
-CMD ["mkdir", "-p", "/home/axbaudri/login"]
 
 
 # FROM : <- viens me chercher l'image de quelque chose qui est sur dockerhub (l'equivalent de github pour docker).
