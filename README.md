@@ -1,7 +1,6 @@
 *This project has been created as part of the 42 curriculum by axbaudri*
 
 ## Description
-
 The goal of this project is to create a website with Docker.
 
 
@@ -22,7 +21,14 @@ make down
 
 ## Resources
 
-MariaDB and Wordpress in Docker Compose : https://stephane-arrami.com/articles/guide-pratique-pour-dockeriser-wordpress-avec-un-dockerfile-personnalise/
-MariaDB in Docker compose : https://www.ionos.fr/digitalguide/hebergement/aspects-techniques/mariadb-docker/
-Dockerfile in wordpress directory : https://stephane-arrami.com/articles/guide-pratique-pour-dockeriser-wordpress-avec-un-dockerfile-personnalise/
-nginx.conf : https://medium.com/@wawerumwaura/nginx-and-docker-configuration-aac7b26210fe
+MariaDB and Wordpress in Docker Compose :
+https://stephane-arrami.com/articles/guide-pratique-pour-dockeriser-wordpress-avec-un-dockerfile-personnalise/
+
+MariaDB in Docker compose :
+https://www.ionos.fr/digitalguide/hebergement/aspects-techniques/mariadb-docker/
+
+Dockerfile in wordpress directory :
+https://stephane-arrami.com/articles/guide-pratique-pour-dockeriser-wordpress-avec-un-dockerfile-personnalise/
+
+nginx.conf :
+https://medium.com/@wawerumwaura/nginx-and-docker-configuration-aac7b26210fe
