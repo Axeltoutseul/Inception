@@ -1,20 +1,20 @@
 #!/bin/sh
 
-DB="my_database"
-USER="axbaudri"
+DB="$DB_NAME"
+USER="$DB_USER"
 PASSWD="$DB_PASSWORD"
 ROOTPASSWD="$DB_ROOT_PASSWORD"
 
-service mysql start;
+service mariadb start;
 
 if [ -f /root/.my.cnf ]; then
-    mysql -u "$USER" -e "CREATE DATABASE IF NOT EXISTS '${DB}';"
-    mysql -u "$USER" -e "CREATE USER ${USER}@'localhost' IDENTIFIED BY '${PASSWD}';"
+    mysql -u "$USER" -e "CREATE DATABASE IF NOT EXISTS \`${DB}\`;"
+    mysql -u "$USER" -e "CREATE USER '${USER}'@'localhost' IDENTIFIED BY '${PASSWD}';"
     mysql -u "$USER" -e "GRANT ALL PRIVILEGES ON ${DB}.* TO '${USER}'@'localhost';"
     mysql -u "$USER" -e "FLUSH PRIVILEGES;"
 
 else
-    mysql -u root -p"$ROOTPASSWD" -e "CREATE DATABASE IF NOT EXISTS '${DB}';"
+    mysql -u root -p"$ROOTPASSWD" -e "CREATE DATABASE IF NOT EXISTS \`${DB}\`;"
     mysql -u root -p"$ROOTPASSWD" -e "CREATE USER '${USER}'@'localhost' IDENTIFIED BY '${PASSWD}';"
     mysql -u root -p"$ROOTPASSWD" -e "GRANT ALL PRIVILEGES ON ${DB}.* TO '${USER}'@'localhost';"
     mysql -u root -p"$ROOTPASSWD" -e "FLUSH PRIVILEGES;"

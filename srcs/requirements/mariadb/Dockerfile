@@ -2,11 +2,15 @@ FROM debian:bookworm
 
 RUN apt-get update -y && apt-get upgrade -y && apt-get install mariadb-server -y
 
-COPY conf/mariadb.conf /etc/mysql/mariadb.conf
+COPY database.sh /docker-entrypoint.sh
+
+COPY conf/mariadb.conf /etc/mysql/mariadb.cnf
 
 EXPOSE 3306
 
-ENTRYPOINT ["bash", "-c", "tail -f /dev/null"]
+RUN chmod +x /docker-entrypoint.sh
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
 
 
 # FROM : <- viens me chercher l'image de quelque chose qui est sur dockerhub (l'equivalent de github pour docker).
