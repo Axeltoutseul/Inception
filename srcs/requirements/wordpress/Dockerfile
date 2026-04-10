@@ -24,6 +24,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN curl -o /usr/local/bin/wp https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
     chmod +x /usr/local/bin/wp
 
+COPY conf/wp-config.php /var/www/html/wp-config
+
 EXPOSE 9000
 
 ENTRYPOINT ["bash", "-c", "tail -f /dev/null"]

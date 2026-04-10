@@ -5,6 +5,8 @@ USER="axbaudri"
 PASSWD="$DB_PASSWORD"
 ROOTPASSWD="$DB_ROOT_PASSWORD"
 
+service mysql start;
+
 if [ -f /root/.my.cnf ]; then
     mysql -u "$USER" -e "CREATE DATABASE IF NOT EXISTS '${DB}';"
     mysql -u "$USER" -e "CREATE USER ${USER}@'localhost' IDENTIFIED BY '${PASSWD}';"

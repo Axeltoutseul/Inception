@@ -2,7 +2,7 @@ FROM debian:bookworm
 
 RUN apt-get update -y && apt-get upgrade -y && apt-get install mariadb-server -y
 
-# RUN /usr/libexec/mariadb-prepare-db-dir mariadb.service
+COPY conf/mariadb.conf /etc/mysql/mariadb.conf
 
 EXPOSE 3306
 
