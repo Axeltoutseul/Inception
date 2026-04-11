@@ -14,4 +14,3 @@ EXPOSE 443
 CMD ["nginx", "-g", "daemon off;"]
 
 #ENTRYPOINT ["bash", "-c", "tail -f /dev/null"]
-#CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
