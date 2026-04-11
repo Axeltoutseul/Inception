@@ -22,19 +22,26 @@ make down
 # Resources
 
 MariaDB and Wordpress in Docker Compose :
+
 https://stephane-arrami.com/articles/guide-pratique-pour-dockeriser-wordpress-avec-un-dockerfile-personnalise/
  
 MariaDB in Docker compose :
+
 https://www.ionos.fr/digitalguide/hebergement/aspects-techniques/mariadb-docker/
  
 Dockerfile in wordpress directory :
+
 https://stephane-arrami.com/articles/guide-pratique-pour-dockeriser-wordpress-avec-un-dockerfile-personnalise/
  
-nginx.conf :
-https://medium.com/@wawerumwaura/nginx-and-docker-configuration-aac7b26210fe
- 
 Database creation :
+
 https://stackoverflow.com/questions/33470753/create-mysql-database-and-user-in-bash-script
  
 Config file for wordpress :
+
 https://blog.o2switch.fr/configurer-wp-config-php-wordpress/
+ 
+nginx.conf :
+
+https://medium.com/@wawerumwaura/nginx-and-docker-configuration-aac7b26210fe
+https://grafikart.fr/tutoriels/nginx-692
