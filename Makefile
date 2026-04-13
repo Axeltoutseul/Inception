@@ -1,6 +1,6 @@
 CD = cd srcs
 
-MKDIR = mkdir -p /home/axbaudri/login srcs/requirements/wordpress_data/wordpress_data
+MKDIR = mkdir -p /home/axbaudri/data srcs/requirements/wordpress_data/wordpress_data
 
 NAME = inception
 

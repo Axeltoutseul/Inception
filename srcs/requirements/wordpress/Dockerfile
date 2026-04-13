@@ -15,7 +15,7 @@ FROM debian:bookworm
 
 RUN apt update -y && \
     apt-get install -y curl git unzip \
-    php php-cli php-fpm php-mysql php-mbstring php-xml php-curl
+    wget php7.3 php-fpm php-mysql mariadb-client
 
 # Installer Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer

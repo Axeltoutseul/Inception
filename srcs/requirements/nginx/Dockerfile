@@ -12,5 +12,3 @@ COPY index.html /var/www/html/index.html
 EXPOSE 443
 
 CMD ["nginx", "-g", "daemon off;"]
-
-#ENTRYPOINT ["bash", "-c", "tail -f /dev/null"]
