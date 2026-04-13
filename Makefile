@@ -1,18 +1,20 @@
 CD = cd srcs
 
-MKDIR = mkdir -p /home/axbaudri/data srcs/requirements/wordpress_data/wordpress_data
+MKDIR = mkdir -p /home/axbaudri/data
 
 NAME = inception
 
 $(NAME):
 	$(MKDIR)
-	$(CD) && docker compose up --build
+	$(CD) && docker compose up --build -d
 
 up: $(NAME)
 
+log:
+	$(CD) && docker compose logs
+
 down:
-	docker run --rm -v "$$PWD:/app" -w /app alpine sh -c "rm -rf srcs/requirements/wordpress_data"
-	docker system prune -f
-	$(CD) && docker compose down
+	$(CD) && docker compose down --volumes
+	docker system prune -a 
 
 re: down up

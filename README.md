@@ -21,27 +21,37 @@ make down
 
 # Resources
 
-MariaDB and Wordpress in Docker Compose :
-
+MariaDB and Wordpress in Docker Compose : 
 https://stephane-arrami.com/articles/guide-pratique-pour-dockeriser-wordpress-avec-un-dockerfile-personnalise/
  
-MariaDB in Docker compose :
-
+MariaDB in Docker compose : 
 https://www.ionos.fr/digitalguide/hebergement/aspects-techniques/mariadb-docker/
  
-Dockerfile in wordpress directory :
-
+Dockerfile in wordpress directory : 
 https://stephane-arrami.com/articles/guide-pratique-pour-dockeriser-wordpress-avec-un-dockerfile-personnalise/
  
-Database creation :
-
+Database creation : 
 https://stackoverflow.com/questions/33470753/create-mysql-database-and-user-in-bash-script
  
-Config file for wordpress :
-
+Config file for wordpress : 
 https://blog.o2switch.fr/configurer-wp-config-php-wordpress/
  
-nginx.conf :
-
+nginx.conf : 
 https://medium.com/@wawerumwaura/nginx-and-docker-configuration-aac7b26210fe
 https://grafikart.fr/tutoriels/nginx-692
+
+
+
+### astuce samy
+```
+commande SQL :
+
+SHOW DATABASES; # pour afficher les base de donnee
+USE #DB_NAME; # pour rentrer dans une base de donner
+SELECT User, Host, Password from mysql.user; # pour afficher les droits wordpress dans mariadb
+```
+```
+commande docker pour debugger :
+
+docker exec -it #nom_du_containner bash
+```
