@@ -4,9 +4,9 @@ RUN apt-get update && \
     apt-get upgrade && \
     apt-get install -y mariadb-server
 
-RUN mkdir -p /run/mysql && \
+RUN mkdir -p /run/mysqld && \
     chown -R mysql:mysql /var/lib/mysql && \
-    chown -R mysql:mysql /run/mysql
+    chown -R mysql:mysql /run/mysqld
 
 COPY database.sh /docker-entrypoint.sh
 
