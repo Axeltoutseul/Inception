@@ -1,3 +1,4 @@
+<?php
 define('DB_NAME', 'inception');
 define('DB_USER', getenv('DB_USER'));
 define('DB_PASSWORD', getenv('DB_PASSWORD'));

@@ -1,6 +1,6 @@
 CD = cd srcs
 
-MKDIR = mkdir -p /home/axbaudri/data
+MKDIR = mkdir -p /home/axbaudri/data && mkdir -p /home/axbaudri/data/mariadb /home/axbaudri/data/wordpress
 
 NAME = inception
 
@@ -15,6 +15,6 @@ log:
 
 down:
 	$(CD) && docker compose down --volumes
-	docker system prune -a 
+	docker system prune -a
 
 re: down up
