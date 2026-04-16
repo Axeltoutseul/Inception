@@ -41,6 +41,7 @@ services:
 
 networks:
   app-network:
+    driver: bridge
 
 volumes:
   wp_data:
