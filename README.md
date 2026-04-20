@@ -1,8 +1,7 @@
 *This project has been created as part of the 42 curriculum by axbaudri*
 
 ## Description
-The goal of this project is to create a website with Docker.
-
+The goal of this project is to create several Docker containers and make them work together by configuring an administration system. There is three containers, each for a tool : MariaDB for database save, Wordpress for website creation and management, and Nginx to configure the web server
 
 ## Instructions
 
@@ -42,7 +41,7 @@ https://grafikart.fr/tutoriels/nginx-692
 
 
 
-### astuce samy
+### astuce
 ```
 commande SQL :
 
