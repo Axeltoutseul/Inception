@@ -15,6 +15,11 @@ log:
 
 down:
 	$(CD) && docker compose down --volumes
-	docker system prune -a
 
-re: down up
+clean: down
+	docker system prune -af
+
+fclean: clean
+	sudo rm -rf /home/axbaudri/data
+
+re: fclean up

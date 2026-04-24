@@ -2,9 +2,10 @@ services:
 
   db:
     build: ./requirements/mariadb/.
-    container_name: inception_db
+    image: mariadb:42
+    container_name: mariadb
     volumes:
-      - /home/axbaudri/data/mariadb:/var/lib/mysql
+      - mariadb_data:/var/lib/mysql
     networks:
       - app-network
     env_file: .env
@@ -12,13 +13,14 @@ services:
 
   wordpress:
     build: ./requirements/wordpress/.
+    image: wordpress:42
     depends_on:
       - db
-    container_name: inception_wp
+    container_name: wordpress
     expose:
       - '9000'
     volumes:
-      - /home/axbaudri/data/wordpress:/var/www/html
+      - wp_data:/var/www/html
     networks:
       - app-network
     env_file: .env
@@ -26,15 +28,15 @@ services:
 
   nginx:
     build: ./requirements/nginx/.
+    image: nginx:42
     depends_on:
       - wordpress
-    container_name: inception_nginx
+    container_name: nginx
     ports:
       - '443:443'
-      - '8080:80'
     volumes:
-      - ./requirements/nginx/conf/nginx.conf:/etc/nginx/nginx.conf:ro
-      - /home/axbaudri/data/wordpress:/var/www/html
+      # - ./requirements/nginx/conf/nginx.conf:/etc/nginx/nginx.conf:ro
+      - wp_data:/var/www/html
     networks:
       - app-network
     env_file: .env
@@ -46,3 +48,13 @@ networks:
 
 volumes:
   wp_data:
+    driver_opts:
+      type: none
+      device: /home/axbaudri/data/wordpress 
+      o: bind
+
+  mariadb_data:
+    driver_opts:
+      type: none
+      device: /home/axbaudri/data/mariadb
+      o: bind
